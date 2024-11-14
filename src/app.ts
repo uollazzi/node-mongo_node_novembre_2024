@@ -1,4 +1,7 @@
-const connectionString = "mongodb+srv://uollazzi:uollazzi@cluster0.axxoeci.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+import { config } from "dotenv";
+config();
+
+const connectionString = process.env.MONGODB_CONNECTION_STRING!;
 
 import { MongoClient } from "mongodb";
 
